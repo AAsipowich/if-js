@@ -24,21 +24,21 @@ test = !test;
 // В переменной test значение false
 console.log(test);
 
-let result = 1;
-let arr = [2, 3, 5, 8]
-for (let i = 0; i <= arr.length; i++) {
-    result *= arr[i]
-    console.log(result);
+let bol = 1;
+let bal = [2, 3, 5, 8]
+for (let i = 0; i <= bal.length; i++) {
+    bol *= bal[i]
+    console.log(bol);
 }
 
-let arr1 = [2, 5, 8, 15, 0, 6, 20, 3]
-for (let i = 0; i <= arr1.length; i++) {
-    if (arr1[i] > 5 && arr1[i] < 10)
-        console.log(arr1[i]);
+let bac = [2, 5, 8, 15, 0, 6, 20, 3]
+for (let i = 0; i <= bac.length; i++) {
+    if (bac[i] > 5 && bac[i] < 10)
+        console.log(bac[i]);
 }
 
-let arr2 = [2, 5, 8, 15, 0, 6, 20, 3]
-for (let i = 0; i <= arr2.length; i++) {
-    if (arr2[i] % 2 == 0)
-        console.log(arr2[i]);
+let tro = [2, 5, 8, 15, 0, 6, 20, 3]
+for (let i = 0; i <= tro.length; i++) {
+    if (tro[i] % 2 == 0)
+        console.log(tro[i]);
 }
