@@ -45,49 +45,70 @@
 
 // Функция palindrome
 
-function palindrome(str) {
-  return str === str.split('').reverse('').join('');
-}
-console.log(palindrome('шалаш'));
+// function palindrome(str) {
+// return str === str.split('').reverse('').join('');
+// }
+// console.log(palindrome('шалаш'));
 
 // Функция min(a, b) и функция max(a,b)
-function min(a, b) {
-  if (a < b) {
-    return a;
-  }
-  return b;
-}
-console.log(min(9, 5));
+// function min(a, b) {
+// if (a < b) {
+// return a;
+// }
+// return b;
+// }
+// console.log(min(9, 5));
 
-function max(a, b) {
-  // debugger
-  if (a > b) {
-    return a;
-  }
-  return b;
-}
-console.log(max(9, 5));
+// function max(a, b) {
+// debugger
+// if (a > b) {
+// return a;
+//  }
+// return b;
+// }
+// console.log(max(9, 5));
 
-function ternMin(a, b) {
-  return a < b ? a : b;
-}
-ternMin(4, 6);
+// function ternMin(a, b) {
+// return a < b ? a : b;
+// }
+// ternMin(4, 6);
 
-function ternMax(a, b) {
-  return a > b ? a : b;
-}
-ternMax(8, 9);
+// function ternMax(a, b) {
+// return a > b ? a : b;
+// }
+// ternMax(8, 9);
 
 // Замена элементов массива
 
-function Zero() {
-  let arr = [3, 11, 50, 27, 19, 4, 80, 78, 52, 90];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 10 === 0) {
-      arr = arr.join().replace(/0/g, 'zero');
-      console.log(arr.split(','));
+// function Zero() {
+// let arr = [3, 11, 50, 27, 19, 4, 80, 78, 52, 90];
+// for (let i = 0; i < arr.length; i++) {
+// if (arr[i] % 10 === 0) {
+// arr = arr.join().replace(/0/g, 'zero');
+// console.log(arr.split(','));
+// }
+// }
+// }
+
+// Zero();
+// Покрасить абзацы по клику
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+const paragText1 = document.getElementById('text1');
+const paragText2 = document.getElementById('text2');
+const paragText3 = document.getElementById('text3');
+
+function colorChange(parameter) {
+  let clicks = 0;
+  return function () {
+    clicks += 1;
+    const paragraph = parameter;
+    paragraph.style.color = colors[clicks - 1];
+    if (clicks > colors.length - 1) {
+      clicks = 0;
     }
-  }
+  };
 }
 
-Zero();
+paragText1.addEventListener('click', colorChange(paragText1));
+paragText2.addEventListener('click', colorChange(paragText2));
+paragText3.addEventListener('click', colorChange(paragText3));
