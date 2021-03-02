@@ -1,14 +1,9 @@
-/* eslint-disable no-console */
 const user = 'John Doe';
-// eslint-disable-next-line no-console
 console.log(user);
 
 let student = 'Anya';
-// eslint-disable-next-line no-console
 console.log(student);
-// В переменной user переменная student
 student = user;
-// eslint-disable-next-line no-console
 console.log(user);
 
 let test = 1;
@@ -17,37 +12,31 @@ test = ++test;
 
 test += '1';
 // В переменной test значение 21
-// eslint-disable-next-line no-console
 console.log(test);
 
 test = --test;
 
 // В переменной test значение 20
-// eslint-disable-next-line no-console
 console.log(test);
 
 test = !test;
 // В переменной test значение false
-// eslint-disable-next-line no-console
 console.log(test);
 
 let bol = 1;
 const bal = [2, 3, 5, 8];
 for (let i = 0; i <= bal.length; i++) {
   bol *= bal[i];
-  // eslint-disable-next-line no-console
   console.log(bol);
 }
 
 const bac = [2, 5, 8, 15, 0, 6, 20, 3];
 for (let i = 0; i <= bac.length; i++) {
-  // eslint-disable-next-line no-console
   if (bac[i] > 5 && bac[i] < 10) console.log(bac[i]);
 }
 
 const tro = [2, 5, 8, 15, 0, 6, 20, 3];
 for (let i = 0; i <= tro.length; i++) {
-  // eslint-disable-next-line eqeqeq
   if (tro[i] % 2 == 0) console.log(tro[i]);
 }
 
@@ -56,7 +45,6 @@ for (let i = 0; i <= tro.length; i++) {
 function palindrome(str) {
   return str === str.split('').reverse('').join('');
 }
-// eslint-disable-next-line no-console
 console.log(palindrome('шалаш'));
 
 // Функция min(a, b) и функция max(a,b)
@@ -66,12 +54,10 @@ function min(a, b) {
   }
   return b;
 }
-// eslint-disable-next-line no-console
 console.log(min(9, 5));
 
 function max(a, b) {
-  // eslint-disable-next-line no-debugger
-  debugger;
+  //debugger
   if (a > b) {
     return a;
   }
@@ -111,7 +97,6 @@ const paragText3 = document.getElementById('text3');
 
 function colorChange(parameter) {
   let clicks = 0;
-  // eslint-disable-next-line func-names
   return function () {
     clicks += 1;
     const paragraph = parameter;
