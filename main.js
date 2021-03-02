@@ -37,7 +37,7 @@ for (let i = 0; i <= bac.length; i++) {
 
 const tro = [2, 5, 8, 15, 0, 6, 20, 3];
 for (let i = 0; i <= tro.length; i++) {
-  if (tro[i] % 2 == 0) console.log(tro[i]);
+  if (tro[i] % 2 === 0) console.log(tro[i]);
 }
 
 // Функция palindrome
@@ -57,7 +57,7 @@ function min(a, b) {
 console.log(min(9, 5));
 
 function max(a, b) {
-  //debugger
+  // debugger
   if (a > b) {
     return a;
   }
