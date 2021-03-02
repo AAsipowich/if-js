@@ -12,5 +12,8 @@ module.exports = {
   },
   rules: {
     'no-plusplus': 'off',
+    'no-console': 0,
+    'no-undef': 0,
+    'func-names': 0,
   },
 };
