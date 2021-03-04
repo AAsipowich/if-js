@@ -15,5 +15,6 @@ module.exports = {
     'no-console': 0,
     'no-undef': 0,
     'func-names': 0,
+    'no-restricted-syntax': 0,
   },
 };
