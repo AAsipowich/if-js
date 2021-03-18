@@ -480,3 +480,62 @@ class Students {
 }
 const students = new Students(studentsData);
 console.log(students.getInfo());
+
+const newDiv = document.createElement('div');
+newDiv.appendChild(newDiv);
+console.log(newDiv);
+
+// LESSON - 9
+console.log('Lesson-9');
+
+const dataColors = {
+
+  data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
+
+  [Symbol.iterator]() {
+    return this;
+  },
+
+  next() {
+    if (this.current === undefined) {
+      this.current = 0;
+    }
+
+    if (this.current < this.data.length) {
+      return {
+        done: false,
+        value: this.data[this.current++],
+      };
+    }
+
+    if (this.current === this.data.length) {
+      this.current = 0;
+      return this.next();
+    }
+
+    return {
+      done: true,
+    };
+  },
+};
+
+const changeStyle = (color) => (event) => {
+  const param = event;
+  param.target.style.color = color.next().value;
+};
+
+function getElement(id) {
+  return document.getElementById(id);
+}
+
+const pFirst = getElement('text1');
+const pSecond = getElement('text2');
+const pThird = getElement('text3');
+
+function addListener(element, eventType, func) {
+  return element.addEventListener(eventType, func);
+}
+
+addListener(pFirst, 'click', changeStyle(dataColors));
+addListener(pSecond, 'click', changeStyle({ ...dataColors }));
+addListener(pThird, 'click', changeStyle({ ...dataColors }));
