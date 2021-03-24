@@ -17,5 +17,6 @@ module.exports = {
     'func-names': 0,
     'no-restricted-syntax': 0,
     'max-classes-per-file': ['error', 3],
+    'no-new': 0,
   },
 };
